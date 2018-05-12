@@ -39,7 +39,7 @@ CREATE TABLE music_content(
 
 
 CREATE TABLE actors(
-    `actorid` int(11) NOT NULL,
+    `actorid` int(11) NOT NULL AUTO_INCREMENT,
     `actor` varchar(255) NOT NULL,
     PRIMARY KEY (`actorid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -67,14 +67,14 @@ CREATE TABLE music_genre_list(
 
 
 CREATE TABLE film_genre_list(
-    `genreid` int(11) NOT NULL,
+    `genreid` int(11) NOT NULL AUTO_INCREMENT,
     `genre_name` varchar(255) NOT NULL,
     PRIMARY KEY(genreid)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
 CREATE TABLE film_genre(
-    `filmid` int(11) NOT NULL,
+    `filmid` int(11) NOT NULL AUTO_INCREMENT,
     `genreid` int(11) NOT NULL,
     KEY `filmid` (`filmid`),
     KEY `genreid` (`genreid`)
